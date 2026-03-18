@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jJg9McnB8d4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alper\\source\\repos\\site\\site\\site.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alper\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.3\\microsoft.aspnetcore.app.internal.assets.10.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

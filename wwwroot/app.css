@@ -1,0 +1,9 @@
+/* Reset Blazor defaults */
+html, body { margin: 0; padding: 0; }
+
+.blazor-error-boundary {
+    background: #b32121;
+    padding: 1rem;
+    color: white;
+    display: none;
+}

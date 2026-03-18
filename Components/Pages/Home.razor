@@ -1,0 +1,87 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+<PageTitle>Portfolio</PageTitle>
+
+<!-- Splash screen -->
+<div id="splash" class="splash">
+    <div class="splash-inner">
+        <div class="splash-dots">
+            <span></span><span></span><span></span>
+        </div>
+        <p class="splash-text">hoşgeldiniz</p>
+    </div>
+</div>
+
+<div id="main-content" class="main-content hidden">
+    <div class="noise"></div>
+
+    <div class="wrap">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="avatar-col">
+                <div class="av-wrap">
+                    <img id="discord-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" class="av" alt="avatar" />
+                    <span id="status-ring" class="sring"></span>
+                </div>
+            </div>
+            <div class="info-col">
+                <div class="tags">
+                    <span class="tag">📍 TR</span>
+                    <span class="tag"><span id="sdot" class="sdot"></span><span id="slabel">...</span></span>
+                </div>
+                <h1 class="uname"><span id="dname">...</span><span class="blink">_</span></h1>
+                <p class="usub">low level · cheat dev · c++</p>
+                <p class="udesc">Memory hacking, DLL injection ve game hacking üzerine projeler geliştiriyorum. Reverse engineering ve low level programlama benim alanım.</p>
+                <div id="act-row" class="act-row" style="display:none">
+                    <span class="act-icon">▶</span>
+                    <span id="act-text"></span>
+                </div>
+                <div class="btns">
+                    <a href="#projects" class="btn-p">Projelere Bak</a>
+                    <a href="https://discord.com/users/1270262361114153044" target="_blank" class="btn-s">Discord</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="sep"></div>
+
+        <!-- Projects -->
+        <section id="projects" class="sec">
+            <h2 class="sec-h">// projeler</h2>
+            <div class="grid">
+                <div class="card"><div class="ctop"><span class="l cpp">C++</span><span class="t">Cheat</span></div><h3>CS2 Hack</h3><p>External cheat. Aimbot, ESP, offset çekici entegreli.</p></div>
+                <div class="card"><div class="ctop"><span class="l cpp">C++</span><span class="t">Tool</span></div><h3>Offset Çekici</h3><p>CS2 için otomatik offset ve netvars çeken tool.</p></div>
+                <div class="card"><div class="ctop"><span class="l cpp">C++</span><span class="t">Injector</span></div><h3>ES Injector</h3><p>DLL injection tool. Manuel map ve LoadLibrary destekli.</p></div>
+                <div class="card"><div class="ctop"><span class="l cpp">C++</span><span class="t">Cheat</span></div><h3>Valorant Hile</h3><p>Valorant için yazılmış cheat projesi.</p></div>
+                <div class="card"><div class="ctop"><span class="l cpp">C++</span><span class="t">Cheat</span></div><h3>Skin Changer</h3><p>CS2 skin changer denemesi.</p></div>
+                <div class="card"><div class="ctop"><span class="l py">Python</span><span class="t">CV</span></div><h3>Kamera Tespit</h3><p>OpenCV ile nesne ve hareket tespit sistemi.</p></div>
+                <div class="card"><div class="ctop"><span class="l cs">C#</span><span class="t">Web</span></div><h3>Portfolio Site</h3><p>Bu site. Blazor + Lanyard API ile Discord durumu canlı.</p></div>
+            </div>
+        </section>
+
+        <div class="sep"></div>
+
+        <!-- Skills -->
+        <section class="sec">
+            <h2 class="sec-h">// yetenekler</h2>
+            <div class="skills">
+                <span class="sk">C++</span><span class="sk">C#</span><span class="sk">Python</span>
+                <span class="sk">Reverse Engineering</span><span class="sk">DLL Injection</span>
+                <span class="sk">Memory Hacking</span><span class="sk">Game Hacking</span><span class="sk">Low Level</span>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("initPortfolio", "1270262361114153044");
+        }
+    }
+}

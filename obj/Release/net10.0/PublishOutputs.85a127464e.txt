@@ -1,0 +1,7 @@
+C:\Users\alper\source\repos\site\publish\site.exe
+C:\Users\alper\source\repos\site\publish\appsettings.Development.json
+C:\Users\alper\source\repos\site\publish\appsettings.json
+C:\Users\alper\source\repos\site\publish\site.dll
+C:\Users\alper\source\repos\site\publish\site.runtimeconfig.json
+C:\Users\alper\source\repos\site\publish\site.pdb
+C:\Users\alper\source\repos\site\publish\site.deps.json
