@@ -1,19 +1,5 @@
 window.initPortfolio = function (userId) {
 
-    // ── Splash screen ──────────────────────────────
-    const splash = document.getElementById('splash');
-    const main   = document.getElementById('main-content');
-
-    setTimeout(() => {
-        splash.classList.add('hide');
-        main.classList.remove('hidden');
-        main.classList.add('visible');
-
-        // Kart reveal başlat
-        initCards();
-        fetchREST();
-    }, 1800);
-
     // ── Card scroll reveal ─────────────────────────
     function initCards() {
         const obs = new IntersectionObserver((entries) => {
@@ -72,6 +58,9 @@ window.initPortfolio = function (userId) {
             .then(j => { if (j.data) updatePresence(j.data); })
             .catch(() => {});
     }
+
+    initCards();
+    fetchREST();
 
     setInterval(fetchREST, 30000);
 
