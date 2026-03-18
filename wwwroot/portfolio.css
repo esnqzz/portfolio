@@ -58,13 +58,6 @@ body {
 
 /* ── Main content ── */
 .main-content { position: relative; }
-.main-content.hidden {
-    animation: fadeIn 0.7s 2s ease forwards;
-    opacity: 0;
-}
-.main-content.visible {
-    animation: fadeIn 0.7s ease forwards;
-}
 @keyframes fadeIn { to { opacity: 1; } }
 
 /* Noise */
