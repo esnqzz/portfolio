@@ -209,13 +209,9 @@ body {
     border: 1px solid rgba(99,102,241,0.1);
     border-radius: 12px; padding: 22px;
     transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
-    opacity: 0; transform: translateY(18px);
 }
-.card.vis {
+.card.vis, .card {
     opacity: 1; transform: translateY(0);
-    transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1),
-                transform 0.5s cubic-bezier(0.16,1,0.3,1),
-                border-color 0.25s, box-shadow 0.25s;
 }
 .card:hover {
     border-color: rgba(99,102,241,0.35);

@@ -77,9 +77,11 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        if (typeof initPortfolio === 'function') {
-            initPortfolio('1270262361114153044');
-        }
+        setTimeout(function() {
+            if (typeof initPortfolio === 'function') {
+                initPortfolio('1270262361114153044');
+            }
+        }, 500);
     });
 </script>
 
